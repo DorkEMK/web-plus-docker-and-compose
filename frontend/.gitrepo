@@ -1,0 +1,12 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/ingydotnet/git-subrepo#readme
+;
+[subrepo]
+	remote = git@github.com:yandex-praktikum/kupipodariday-frontend.git
+	branch = main
+	commit = 61124eb7787adcb2073341d13ac10d64413e1745
+	parent = 9ac79941b5e1fba67838911a32612287e85d5771
+	method = merge
+	cmdver = 0.4.6
