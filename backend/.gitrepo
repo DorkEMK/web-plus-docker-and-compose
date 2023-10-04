@@ -1,0 +1,12 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/ingydotnet/git-subrepo#readme
+;
+[subrepo]
+	remote = git@github.com:DorkEMK/kupipodariday-backend.git
+	branch = main
+	commit = 8823112a95e5fe2c36077a3d5c27d43ee65b73ed
+	parent = 32a3ab08a1992f08400e093f8ef1166f91005732
+	method = merge
+	cmdver = 0.4.6
