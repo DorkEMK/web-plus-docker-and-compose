@@ -20,4 +20,4 @@ build/
 
 # Linters
 .eslintrc.js
-.prettier.rc
+.prettierrc
