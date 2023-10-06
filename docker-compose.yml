@@ -1,0 +1,53 @@
+version: '3'
+
+services:
+  backend:
+    container_name: backend
+    build: 
+      context: backend
+      dockerfile: Dockerfile
+    image: backend
+    restart: unless-stopped
+    env_file: 
+      - .backend.env
+      - .jwt.env
+      - .env
+    ports:
+      - '4000:3000'
+    depends_on:
+      - database
+    networks:
+      - backend
+      - public
+
+  frontend:
+    container_name: frontend
+    build: 
+      context: frontend
+      dockerfile: Dockerfile
+    image: frontend
+    restart: unless-stopped
+    ports:
+      - '8081:80'
+    networks:
+      - public
+      
+  database:
+    container_name: postgres
+    image: postgres:latest
+    env_file: .env
+    volumes:
+      - pg_data:${POSTGRES_PGDATA}
+    restart: unless-stopped
+    networks:
+      - backend
+
+volumes:
+  pg_data:
+
+networks:
+  backend:
+    driver: bridge
+    internal: true
+  public:
+    driver: bridge
