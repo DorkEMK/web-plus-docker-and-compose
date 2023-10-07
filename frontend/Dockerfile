@@ -6,7 +6,7 @@ COPY . ./
 RUN npm run build \
     && rm -rf ./src
 
-FROM nginx:1.23.1-alpine AS frontend
+FROM nginx:latest AS frontend
 COPY --from=builder /app/build /usr/share/nginx/html
 COPY ./nginx/conf.d/default.conf /etc/nginx/conf.d
 EXPOSE 80
