@@ -12,9 +12,10 @@ For the service deployment, the following was done:
 - The application was deployed on Yandex Cloud (currently unavailable).
 
 **Launch the Application**
-Clone the repository
-Create .env files
-Start the server: ```docker-compose up -d```
+
+- Clone the repository
+- Create .env files
+- Start the server: ```docker-compose up -d```
 
 **Links (currently unavailable)**
 - IP адрес 51.250.77.9
